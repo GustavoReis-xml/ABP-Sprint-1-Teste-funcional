@@ -3,45 +3,46 @@ import './App.css';
 import L from 'leaflet';
 import axios from 'axios';
 
-// Array de estados do Brasil (siglas e nomes)
+// Array de estados do Brasil (siglas e nomes) sigla = id
 const estados = [
-  { sigla: 'AC', nome: 'Acre' },
-  { sigla: 'AL', nome: 'Alagoas' },
-  { sigla: 'AP', nome: 'Amapá' },
-  { sigla: 'AM', nome: 'Amazonas' },
-  { sigla: 'BA', nome: 'Bahia' },
-  { sigla: 'CE', nome: 'Ceará' },
-  { sigla: 'DF', nome: 'Distrito Federal' },
-  { sigla: 'ES', nome: 'Espírito Santo' },
-  { sigla: 'GO', nome: 'Goiás' },
-  { sigla: 'MA', nome: 'Maranhão' },
-  { sigla: 'MT', nome: 'Mato Grosso' },
-  { sigla: 'MS', nome: 'Mato Grosso do Sul' },
-  { sigla: 'MG', nome: 'Minas Gerais' },
-  { sigla: 'PA', nome: 'Pará' },
-  { sigla: 'PB', nome: 'Paraíba' },
-  { sigla: 'PR', nome: 'Paraná' },
-  { sigla: 'PE', nome: 'Pernambuco' },
-  { sigla: 'PI', nome: 'Piauí' },
-  { sigla: 'RJ', nome: 'Rio de Janeiro' },
-  { sigla: 'RN', nome: 'Rio Grande do Norte' },
-  { sigla: 'RS', nome: 'Rio Grande do Sul' },
-  { sigla: 'RO', nome: 'Rondônia' },
-  { sigla: 'RR', nome: 'Roraima' },
-  { sigla: 'SC', nome: 'Santa Catarina' },
-  { sigla: 'SP', nome: 'São Paulo' },
-  { sigla: 'SE', nome: 'Sergipe' },
-  { sigla: 'TO', nome: 'Tocantins' }
+  { sigla: '12', nome: 'Acre' },
+  { sigla: '27', nome: 'Alagoas' },
+  { sigla: '16', nome: 'Amapá' },
+  { sigla: '13', nome: 'Amazonas' },
+  { sigla: '29', nome: 'Bahia' },
+  { sigla: '23', nome: 'Ceará' },
+  { sigla: '53', nome: 'Distrito Federal' },
+  { sigla: '32', nome: 'Espírito Santo' },
+  { sigla: '52', nome: 'Goiás' },
+  { sigla: '21', nome: 'Maranhão' },
+  { sigla: '51', nome: 'Mato Grosso' },
+  { sigla: '50', nome: 'Mato Grosso do Sul' },
+  { sigla: '31', nome: 'Minas Gerais' },
+  { sigla: '15', nome: 'Pará' },
+  { sigla: '25', nome: 'Paraíba' },
+  { sigla: '41', nome: 'Paraná' },
+  { sigla: '26', nome: 'Pernambuco' },
+  { sigla: '22', nome: 'Piauí' },
+  { sigla: '33', nome: 'Rio de Janeiro' },
+  { sigla: '24', nome: 'Rio Grande do Norte' },
+  { sigla: '43', nome: 'Rio Grande do Sul' },
+  { sigla: '11', nome: 'Rondônia' },
+  { sigla: '14', nome: 'Roraima' },
+  { sigla: '42', nome: 'Santa Catarina' },
+  { sigla: '35', nome: 'São Paulo' },
+  { sigla: '28', nome: 'Sergipe' },
+  { sigla: '17', nome: 'Tocantins' }
 ];
+
 
 // Array de biomas
 const biomas = [
-  { id: 'Amazônia', nome: 'Amazônia' },
-  { id: 'Caatinga', nome: 'Caatinga' },
-  { id: 'Cerrado', nome: 'Cerrado' },
-  { id: 'Mata Atlântica', nome: 'Mata Atlântica' },
-  { id: 'Pantanal', nome: 'Pantanal' },
-  { id: 'Pampa', nome: 'Pampa' },
+  { id: '1', nome: 'Amazônia' },
+  { id: '2', nome: 'Caatinga' },
+  { id: '3', nome: 'Cerrado' },
+  { id: '4', nome: 'Mata Atlântica' },
+  { id: '5', nome: 'Pantanal' },
+  { id: '6', nome: 'Pampa' },
 ];
 
 function App() {

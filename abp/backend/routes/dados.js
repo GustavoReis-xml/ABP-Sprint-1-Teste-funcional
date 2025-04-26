@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const pool = require('../db');
 
-// FOCOS POR ESTADO (filtro por UF)
+// FOCOS POR ESTADO
 router.get('/focos-estado', async (req, res) => {
   const { estado } = req.query;
   console.log('Recebendo requisição para /focos-estado');
